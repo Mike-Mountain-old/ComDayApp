@@ -1,0 +1,22 @@
+<div class="top-nav">
+  <a class="top-link">
+    <figure class="image is-64x64 logo">
+      <img src="../../../assets/images/pokemon_go_community_day_logo.png">
+    </figure>
+  </a>
+  <ng-container *ngIf="isUserAuthenticated; else unAuthenticated">
+    <a class="top-link">
+      Logout
+    </a>
+  </ng-container>
+</div>
+<ng-template #unAuthenticated>
+  <div class="anon-links">
+    <a class="top-link">
+      Login
+    </a>
+    <a class="top-link">
+      Register
+    </a>
+  </div>
+</ng-template>
