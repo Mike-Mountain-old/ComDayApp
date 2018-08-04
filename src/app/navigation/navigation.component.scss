@@ -1,0 +1,59 @@
+@import '../../assets/Partials/variables';
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  width: 0;
+  margin: auto;
+  a {
+    color: $danger;
+    &:hover {
+      color: $link;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 170px;
+  margin: 0 auto 1.3rem auto;
+  //border: 1px solid black;
+  //background-color: white;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+  height: 2.6rem;
+  width: 100%;
+  //border: 1px solid black;
+}
+.row1 {
+  justify-content: center;
+  margin-bottom: -19px;
+}
+.row2 {
+  justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+
+}
+.row3 {
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
