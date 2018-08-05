@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { OverlayNavComponent } from './overlay-nav/overlay-nav.component';
-import { TopNavComponent } from './top-nav/top-nav.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {EventsModule} from '../events/events.module';
+import {OverlayNavComponent} from './overlay-nav/overlay-nav.component';
+import {TopNavComponent} from './top-nav/top-nav.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    EventsModule
   ],
   declarations: [
     OverlayNavComponent,
@@ -16,4 +18,5 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     TopNavComponent
   ]
 })
-export class NavigationModule { }
+export class NavigationModule {
+}

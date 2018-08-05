@@ -7,6 +7,20 @@
 </nav>
 <ng-container *ngIf="showMenu">
   <div class="overlay">
+    <div class="admin-links">
+      <!--<button class="button is-outlined is-success is-disabled" disabled routerLink="/event/1">-->
+        <!--View Event-->
+      <!--</button>-->
+      <button class="button is-outlined is-primary" routerLink="/create-event" (click)="showMenu = false">
+        Create Event
+      </button>
+      <button class="button is-outlined is-danger" routerLink="/event-archive" (click)="showMenu = false">
+        Event archive
+      </button>
+    </div>
+    <button class="button is-outlined is-success" style="width: 6.5rem; margin: 0 auto" routerLink="/event" (click)="showMenu = false">
+      View Event
+    </button>
     <div class="links">
       <div class="row row1">
         <a routerLink="">

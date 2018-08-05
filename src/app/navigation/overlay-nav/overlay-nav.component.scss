@@ -25,6 +25,12 @@
   border: 1px solid black;
 }
 
+.admin-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: .5rem;
+}
+
 .links {
   display: flex;
   flex-direction: column;
