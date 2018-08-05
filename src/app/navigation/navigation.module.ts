@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationComponent } from './navigation/navigation.component';
+import { OverlayNavComponent } from './overlay-nav/overlay-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 
 @NgModule({
@@ -8,12 +8,12 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     CommonModule
   ],
   declarations: [
-    NavigationComponent,
+    OverlayNavComponent,
     TopNavComponent
   ],
   exports: [
-    NavigationComponent,
+    OverlayNavComponent,
     TopNavComponent
   ]
 })
-export class AppNavigationModule { }
+export class NavigationModule { }

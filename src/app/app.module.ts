@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppNavigationModule } from './app-navigation/app-navigation.module';
+import { NavigationModule } from './navigation/navigation.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 
@@ -14,7 +14,7 @@ import { LandingComponent } from './landing/landing.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppNavigationModule
+    NavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
