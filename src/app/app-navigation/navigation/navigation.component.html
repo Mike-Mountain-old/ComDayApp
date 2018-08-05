@@ -1,9 +1,9 @@
 <nav class="navbar is-fixed-bottom navigation">
-  <div class="show-menu" (click)="showMenu = !showMenu">
+  <a class="show-menu" (click)="showMenu = !showMenu">
     <span class="icon">
       <i class="fas fa-3x fa-bullseye"></i>
     </span>
-  </div>
+  </a>
 </nav>
 <ng-container *ngIf="showMenu">
   <div class="overlay">

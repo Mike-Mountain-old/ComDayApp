@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
-  isUserAuthenticated = false;
+  isUserAuthenticated = true;
+  openDropDown = false;
 
   constructor() { }
 

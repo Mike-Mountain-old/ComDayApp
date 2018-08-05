@@ -5,9 +5,32 @@
     </figure>
   </a>
   <ng-container *ngIf="isUserAuthenticated; else unAuthenticated">
-    <a class="top-link">
-      Logout
-    </a>
+    <div class="dropdown" [class.is-active]="openDropDown">
+      <div class="dropdown-trigger">
+        <a (click)="openDropDown = !openDropDown">
+          <span class="iocn">
+            <i class="far fa-2x fa-user"></i>
+          </span>
+        </a>
+      </div>
+      <div class="dropdown-menu user-menu" id="dropdown-menu3" role="menu">
+        <div class="dropdown-content">
+          <a routerLink="" class="dropdown-item">
+            View Profile
+          </a>
+          <a routerLink="" class="dropdown-item">
+            Edit Profile
+          </a>
+          <a routerLink="" class="dropdown-item">
+            Settings
+          </a>
+          <hr class="dropdown-divider">
+          <a href="#" class="dropdown-item">
+            Logout: Trainer
+          </a>
+        </div>
+      </div>
+    </div>
   </ng-container>
 </div>
 <ng-template #unAuthenticated>

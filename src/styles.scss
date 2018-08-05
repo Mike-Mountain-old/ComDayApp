@@ -4,6 +4,7 @@ body {
   height: 100vh;
   background: url("/assets/images/site_bg.jpg") 50%;
   background-size: cover;
+  overflow: hidden !important;
 }
 
 .container {

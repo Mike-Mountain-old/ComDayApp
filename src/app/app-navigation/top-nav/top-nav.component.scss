@@ -9,3 +9,13 @@
   justify-content: space-between;
   width: 120px;
 }
+
+.dropdown-trigger {
+  height: 2.7rem;
+}
+
+.user-menu {
+  top: 72%;
+  margin-left: -6.5rem;
+  //TODO: Hide the user-dropdown-menu when the overlay menu is active
+}
