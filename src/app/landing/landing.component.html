@@ -1,10 +1,10 @@
 <section class="landing">
   <div class="container">
-    <div class="card">
-      <h1 class="welcome has-text-centered">
+    <div class="box has-text-centered">
+      <h1 class="welcome">
         Pokemon Go Community Day
       </h1>
-      <button class="button is-outlined is-primary" routerLink="/create-event">
+      <button class="button is-outlined is-primary" routerLink="/create-event" *ngIf="authenticated">
         Create Event
       </button>
     </div>

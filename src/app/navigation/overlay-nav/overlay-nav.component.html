@@ -8,9 +8,6 @@
 <ng-container *ngIf="showMenu">
   <div class="overlay">
     <div class="admin-links">
-      <!--<button class="button is-outlined is-success is-disabled" disabled routerLink="/event/1">-->
-        <!--View Event-->
-      <!--</button>-->
       <button class="button is-outlined is-primary" routerLink="/create-event" (click)="showMenu = false">
         Create Event
       </button>
@@ -23,31 +20,31 @@
     </button>
     <div class="links">
       <div class="row row1">
-        <a routerLink="">
+        <a routerLink="" (click)="showMenu = false">
           <span class="icon">
             <i class="fas fa-2x fa-bullseye"></i>
           </span>
         </a>
       </div>
       <div class="row row2">
-        <a routerLink="">
+        <a routerLink="" (click)="showMenu = false">
           <span class="icon">
             <i class="fas fa-2x fa-bullseye"></i>
           </span>
         </a>
-        <a routerLink="">
+        <a routerLink="" (click)="showMenu = false">
           <span class="icon">
             <i class="fas fa-2x fa-bullseye"></i>
           </span>
         </a>
       </div>
       <div class="row row3">
-        <a routerLink="">
+        <a routerLink="" (click)="showMenu = false">
           <span class="icon">
             <i class="fas fa-2x fa-bullseye"></i>
           </span>
         </a>
-        <a routerLink="">
+        <a routerLink="" (click)="showMenu = false">
           <span class="icon">
             <i class="fas fa-2x fa-bullseye"></i>
           </span>
