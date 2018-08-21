@@ -1,0 +1,42 @@
+<div class="contain">
+  <p class="subtitle has-text-centered has-text-light">Register:</p>
+  <form>
+
+    <div class="field">
+      <label for="trainerName" class="label has-text-light">Trainer Name:</label>
+      <div class="control">
+        <input class="input" type="text" name="trainer-name" id="trainerName" [(ngModel)]="trainerName">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="team" class="label has-text-light">Team:</label>
+      <div class="control">
+        <input class="input" type="text" name="trainer-name" id="team" [(ngModel)]="team">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email" class="label has-text-light">Email Address:</label>
+      <div class="control">
+        <input class="input" type="email" name="email" id="email" [(ngModel)]="email">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label has-text-light">Password:</label>
+      <div class="control">
+        <input class="input" type="password" name="password" [(ngModel)]="password">
+      </div>
+      <label class="label has-text-light">Confirm Password:</label>
+      <div class="control">
+        <input class="input" type="password" name="passwordConfirm" [(ngModel)]="passwordConfirm">
+      </div>
+    </div>
+
+    <button class="button is-outlined is-success"
+            (click)="registerUser(trainerName, team, email, password, passwordConfirm)">
+      Register
+    </button>
+  </form>
+</div>

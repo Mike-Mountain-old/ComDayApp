@@ -1,13 +1,48 @@
-<section class="container">
-  <div class="box">
-    <h2 class="subtitle has-text-centered">Create Event</h2>
-    <form>
-      <div class="field">
-        <label class="label">Title</label>
-        <div class="control">
-          <input class="input" type="text">
+<!--<ng-container *ngIf="authenticated">-->
+  <section class="create-event container">
+    <div class="box">
+    <h2 class="subtitle has-text-centered">Create an event</h2>
+      <form>
+        <div class="field">
+          <label class="label">Event Title</label>
+          <div class="control">
+            <input class="input" type="text">
+          </div>
         </div>
+
+        <div class="field">
+          <label class="label">Venue</label>
+          <div class="control">
+            <input class="input" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Date &amp; Time</label>
+          <div class="control">
+            <input class="input" type="datetime-local">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Host</label>
+          <div class="control">
+            <input class="input" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Image</label>
+          <div class="control">
+            <input class="input" type="file">
+          </div>
+        </div>
+      </form>
+      <div class="submit">
+        <button class="button is-info">
+          Submit
+        </button>
       </div>
-    </form>
-  </div>
-</section>
+    </div>
+  </section>
+<!--</ng-container>-->

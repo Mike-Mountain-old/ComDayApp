@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from '../Services/user.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  authenticated: boolean;
+
+  constructor(public userService: UserService) {
+  }
 
   ngOnInit() {
+    this.userService.authenticated.subscribe(value => {
+      this.authenticated = value;
+    });
   }
 
 }

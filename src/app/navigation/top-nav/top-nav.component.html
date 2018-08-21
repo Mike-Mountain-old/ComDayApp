@@ -1,45 +1,60 @@
-<div class="top-nav">
-  <a class="top-link">
-    <figure class="image is-64x64 logo">
-      <img src="../../../assets/images/pokemon_go_community_day_logo.png">
-    </figure>
-  </a>
-  <ng-container *ngIf="isUserAuthenticated; else unAuthenticated">
-    <div class="dropdown" [class.is-active]="openDropDown">
-      <div class="dropdown-trigger">
-        <a (click)="openDropDown = !openDropDown">
-          <span class="iocn">
-            <i class="far fa-2x fa-user"></i>
-          </span>
-        </a>
-      </div>
-      <div class="dropdown-menu user-menu" id="dropdown-menu3" role="menu">
-        <div class="dropdown-content">
-          <a routerLink="" class="dropdown-item">
-            View Profile
-          </a>
-          <a routerLink="" class="dropdown-item">
-            Edit Profile
-          </a>
-          <a routerLink="" class="dropdown-item">
-            Settings
-          </a>
-          <hr class="dropdown-divider">
-          <a href="#" class="dropdown-item">
-            Logout: Trainer
+<app-spinner [loading]="loading">
+  <div class="top-nav">
+    <a class="top-link" routerLink="">
+      <figure class="image is-64x64 logo">
+        <img src="../../../assets/images/pokemon_go_community_day_logo.png">
+      </figure>
+    </a>
+    <ng-container *ngIf="authenticated; else unAuthenticated">
+      <div class="dropdown" [class.is-active]="openDropDown">
+        <div class="dropdown-trigger">
+          <a (click)="openDropDown = !openDropDown">
+            <span class="iocn">
+              <i class="far fa-2x fa-user"></i>
+            </span>
           </a>
         </div>
+        <div class="dropdown-menu user-menu" id="dropdown-menu3" role="menu">
+          <div class="dropdown-content">
+            <a routerLink="user/{{userId}}" class="dropdown-item" (click)="openDropDown = false">
+              View Profile
+            </a>
+            <a routerLink="/profile/edit-profile" class="dropdown-item" (click)="openDropDown = false">
+              Edit Profile
+            </a>
+            <a routerLink="/profile/user-settings" class="dropdown-item" (click)="openDropDown = false">
+              Settings
+            </a>
+            <hr class="dropdown-divider">
+            <a (click)="userLogout()" class="dropdown-item">
+              Logout: Trainer
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </ng-container>
-</div>
-<ng-template #unAuthenticated>
-  <div class="anon-links">
-    <a class="top-link">
-      Login
-    </a>
-    <a class="top-link">
-      Register
-    </a>
+    </ng-container>
   </div>
-</ng-template>
+  <ng-template #unAuthenticated>
+    <div class="anon-links">
+      <a class="button is-outlined is-warning is-size-7-mobile" (click)="openModal('login')">
+        Login
+      </a>
+      <a class="button is-outlined is-info is-size-7-mobile" (click)="openModal('register')">
+        Register
+      </a>
+    </div>
+  </ng-template>
+
+  <ng-container *ngIf="login; else doRegister ">
+    <app-modal>
+      <app-login></app-login>
+    </app-modal>
+  </ng-container>
+
+  <ng-template #doRegister>
+    <app-modal>
+      <app-register></app-register>
+    </app-modal>
+  </ng-template>
+</app-spinner>
+

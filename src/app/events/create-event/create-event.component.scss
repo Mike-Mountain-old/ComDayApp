@@ -1,0 +1,9 @@
+@import '../../../assets/Partials/mixins';
+
+.button {
+  margin-top: .5rem;
+}
+
+.submit {
+  @include flexCenter;
+}
