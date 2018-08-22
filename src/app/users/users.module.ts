@@ -6,13 +6,15 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {ProfileComponent} from './profile/profile.component';
 import {UserRoutingModule} from './user-routing.module';
+import {SpinnerModule} from '../Shared/spinner/spinner.module';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    UserRoutingModule
+    UserRoutingModule,
+    SpinnerModule
   ],
   exports: [
     LoginComponent,

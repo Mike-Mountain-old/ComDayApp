@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {UserService} from '../../Services/user.service';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {UserService} from '../user.service';
+import {User} from '../users.model';
+import {Observable} from 'rxjs';
+import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
+import {AngularFireAuth} from 'angularfire2/auth';
 
 @Component({
   selector: 'app-profile',
@@ -8,13 +12,19 @@ import {UserService} from '../../Services/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  user: User;
+  loading = true;
 
-  users: any;
+  constructor(public userService: UserService) {
+  }
 
   ngOnInit() {
-    this.userService.viewUserProfile();
-    // this.users = this.userService.query;
+    this.userService.getSingleUser().subscribe(user => {
+      this.user = user;
+      this.userService.loading.subscribe(loading => {
+        this.loading = loading;
+      });
+    });
   }
 
 }

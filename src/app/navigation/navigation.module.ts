@@ -6,25 +6,24 @@ import {UsersModule} from '../users/users.module';
 import {OverlayNavComponent} from './overlay-nav/overlay-nav.component';
 import {TopNavComponent} from './top-nav/top-nav.component';
 import {ModalComponent} from '../Shared/modal/modal.component';
-import {SpinnerComponent} from '../Shared/spinner/spinner.component';
+import {SpinnerModule} from '../Shared/spinner/spinner.module';
 
 @NgModule({
   imports: [
     CommonModule,
     EventsModule,
-    UsersModule
+    UsersModule,
+    SpinnerModule
   ],
   declarations: [
     OverlayNavComponent,
     TopNavComponent,
     ModalComponent,
-    SpinnerComponent
   ],
   exports: [
     OverlayNavComponent,
     TopNavComponent,
     ModalComponent,
-    SpinnerComponent
   ]
 })
 export class NavigationModule {

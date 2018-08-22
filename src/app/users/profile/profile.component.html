@@ -1,4 +1,7 @@
-<p>
-  profile works!
-</p>
-<p>USERS:</p>
+<app-spinner [loading]="loading">
+  <ng-container *ngIf="user">
+    <div class="box">
+      Username: {{user.trainer_name}}
+    </div>
+  </ng-container>
+</app-spinner>

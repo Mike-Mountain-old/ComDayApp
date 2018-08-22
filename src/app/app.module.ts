@@ -11,11 +11,12 @@ import {EventsModule} from './events/events.module';
 import {AppComponent} from './app.component';
 import {LandingComponent} from './landing/landing.component';
 import {environment} from '../environments/environment';
+import {UsersModule} from './users/users.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +26,8 @@ import {environment} from '../environments/environment';
     AngularFireStorageModule,
     AngularFireAuthModule,
     NavigationModule,
-    EventsModule
+    EventsModule,
+    UsersModule
   ],
   exports: [],
   providers: [],

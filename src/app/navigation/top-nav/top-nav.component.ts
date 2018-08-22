@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from '../../Services/user.service';
+import {UserService} from '../../users/user.service';
 import {ModalService} from '../../Services/modal.service';
 import {AngularFireAuth} from 'angularfire2/auth';
 import {Router} from '@angular/router';
@@ -34,7 +34,6 @@ export class TopNavComponent implements OnInit {
       this.authenticated = value;
       if (this.authenticated) {
         this.userId = this.fireAuth.auth.currentUser.uid;
-        console.log('User:ID: ' + this.userId);
       }
     });
 
@@ -47,11 +46,9 @@ export class TopNavComponent implements OnInit {
     if (use === 'login') {
       this.login = true;
       this.register = false;
-      console.log(this.login + ' (should be true)');
     } else {
       this.register = true;
       this.login = false;
-      console.log(this.register + ' (should be true)');
     }
     this.modalService.openModal();
   }
