@@ -2,15 +2,17 @@
   <p class="subtitle has-text-centered has-text-light">Login:</p>
   <form>
     <div class="field">
-      <label class="label has-text-light">Email Address:</label>
       <div class="control">
-        <input class="input" type="email" name="email" [(ngModel)]="email">
+        <label class="label has-text-light">Email Address:
+          <input class="input" type="email" autocomplete="username email" name="email" [(ngModel)]="email">
+        </label>
       </div>
     </div>
     <div class="field">
-      <label class="label has-text-light">Password:</label>
       <div class="control">
-        <input class="input" type="password" name="password" [(ngModel)]="password">
+        <label class="label has-text-light">Password:
+          <input class="input" type="password" autocomplete="current-password" name="password" [(ngModel)]="password">
+        </label>
       </div>
     </div>
     <button class="button is-outlined is-success"

@@ -14,7 +14,6 @@ const userRoutes: Routes = [
       {
         path: '',
         children: [
-          // {path: 'profile', component: ProfileComponent},
           {path: 'edit-profile', component: ProfileComponent},
           {path: 'user-settings', component: ProfileComponent},
         ]
