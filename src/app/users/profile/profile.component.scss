@@ -1,0 +1,61 @@
+.is-flex {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.trainer-name {
+  position: absolute;
+  top: 15%;
+  left: 18%;
+}
+
+.teamTitle {
+  margin-bottom: .5rem;
+}
+
+.pokebox {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  justify-self: center;
+}
+
+.team {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: .5rem;
+}
+
+.box-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.box-2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.box-1 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.box-1 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.box-1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.box-1 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}

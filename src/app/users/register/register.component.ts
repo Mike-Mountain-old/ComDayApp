@@ -31,11 +31,11 @@ export class RegisterComponent implements OnInit {
   registerUser(trainerName: string, team: string, email: string, password: string, passwordConfirm: string) {
     this.setTeamColor(team);
     if (password === passwordConfirm) {
-      this.userService.registerNewUser(email, password, trainerName, team, this.teamColor);
+      this.userService.registerNewUserWithEmail(email, password, trainerName, team, this.teamColor);
       this.modalService.closeModal();
       this.router.navigateByUrl('');
     } else {
-      alert('Error!, Passwords do not match.' + '  PassOne: ' + password + ' PassTwo: ' + passwordConfirm);
+      alert('Error!, Passwords do not match.');
     }
   }
 

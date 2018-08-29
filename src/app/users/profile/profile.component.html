@@ -1,7 +1,21 @@
 <app-spinner [loading]="loading">
   <ng-container *ngIf="user">
     <div class="box">
-      Username: {{user.trainer_name}}
+      <div class="is-flex">
+        <figure class="image is-128x128">
+          <img src="../../../assets/images/mystic_bg_1.png">
+          <h2 class="subtitle trainer-name">{{user.trainer_name}}</h2>
+        </figure>
+      </div>
+      <h3 class="has-text-centered teamTitle">{{user.trainer_name}}'s Team: </h3>
+      <div class="team">
+        <div class="pokebox box-1"></div>
+        <div class="pokebox box-2"></div>
+        <div class="pokebox box-3"></div>
+        <div class="pokebox box-4"></div>
+        <div class="pokebox box-5"></div>
+        <div class="pokebox box-6"></div>
+      </div>
     </div>
   </ng-container>
 </app-spinner>

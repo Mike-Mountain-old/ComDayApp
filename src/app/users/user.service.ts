@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from 'angularfire2/auth';
-import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
+import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 
-import {User, UserProfile} from './users.model';
+import {User} from './users.model';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,6 @@ export class UserService {
 
   constructor(public fireAuth: AngularFireAuth,
               public db: AngularFirestore,
-              public route: ActivatedRoute,
               public router: Router) {
   }
 
@@ -61,7 +60,7 @@ export class UserService {
       });
   }
 
-  registerNewUser(email: string, password: string, trainerName: string, team: string, teamColor: string) {
+  registerNewUserWithEmail(email: string, password: string, trainerName: string, team: string, teamColor: string) {
     this.loadingSource.next(true);
     this.fireAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(callback => {
